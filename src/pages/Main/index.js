@@ -1,59 +1,35 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import {
-  Text, Image, StyleSheet, Dimensions, ImageBackground, StatusBar,
-} from 'react-native';
+import Header from '~/components/Header';
+import Tabs from '~/components/Tabs';
+import { Container, Content, Card, CardHeader, CardContent, CardFooter, Title, Description, Annotation } from './styles';
 
-const styles = StyleSheet.create({
-  container: {
-    alignItems: 'center',
-    flex: 1,
-    paddingHorizontal: 20,
-  },
-  fileName: {
-    fontWeight: 'bold',
-    marginTop: 5,
-  },
-  instructions: {
-    color: '#DDD',
-    fontSize: 14,
-    marginTop: 20,
-    textAlign: 'center',
-  },
-  logo: {
-    height: Dimensions.get('window').height * 0.11,
-    marginVertical: Dimensions.get('window').height * 0.11,
-    width: Dimensions.get('window').height * 0.11 * (1950 / 662),
-  },
-  welcome: {
-    color: '#fff',
-    fontSize: 22,
-    fontWeight: 'bold',
-    textAlign: 'center',
-  },
-});
+export default () =>{
 
-const Main = () => (
-  <ImageBackground
-    source={{
-      uri: 'https://s3-sa-east-1.amazonaws.com/rocketseat-cdn/background.png',
-    }}
-    style={styles.container}
-    resizeMode="cover"
-  >
-    <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
-    <Image
-      source={{
-        uri: 'https://s3-sa-east-1.amazonaws.com/rocketseat-cdn/rocketseat_logo.png',
-      }}
-      style={styles.logo}
-      resizeMode="contain"
-    />
-    <Text style={styles.welcome}>Bem-vindo ao Template Básico!</Text>
-    <Text style={styles.instructions}>Essa é a tela principal da sua aplicação =)</Text>
-    <Text style={styles.instructions}>Você pode editar a tela no arquivo:</Text>
-    <Text style={[styles.instructions, styles.fileName]}>src/pages/Main/index.js</Text>
-  </ImageBackground>
-);
+  return(
+    <Container>
+      <Header />
 
-export default Main;
+      <Content>
+        <Card>
+          <CardHeader>
+            <Icon name="attach-money" size={28} color="#666" />
+            <Icon name="visibility-off" size={28} color="#666" />
+          </CardHeader>
+          <CardContent>
+            <Title>Saldo Disponível</Title>
+            <Description>R$ 348.347,95</Description>
+          </CardContent>
+          <CardFooter>
+            <Annotation>
+              Transferencia de ninguem e bla bla bla
+            </Annotation>
+          </CardFooter>
+        </Card>
+      </Content>
+
+      <Tabs />
+    </Container>
+  );
+}

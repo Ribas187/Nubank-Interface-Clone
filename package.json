@@ -16,6 +16,7 @@
     "react": "16.9.0",
     "react-native": "0.61.5",
     "react-native-gesture-handler": "^1.5.3",
+    "react-native-vector-icons": "^6.6.0",
     "react-navigation": "^4.0.10",
     "reactotron-react-native": "^4.0.3",
     "styled-components": "^5.0.0"
