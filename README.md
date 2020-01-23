@@ -7,3 +7,4 @@ react-native-vector-icons
 react-native-qrcode-svg
 react-native-gesture-handler
 
+![Farmers Market Finder Demo](demo/demo.gif)
