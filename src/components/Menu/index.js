@@ -14,7 +14,7 @@ export default (props) => {
         }} >
             <Code>
                 <QRCode
-                    value="https://google.com"
+                    value="https://github.com/Ribas187"
                     size={80}
                     color="#FFF"
                     backgroundColor="#8B10AE"
